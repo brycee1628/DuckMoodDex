@@ -123,6 +123,10 @@ const getNumberId = (id) => {
                 height: 230px;
                 margin-bottom: .3rem;
 
+                @media (max-width: 600px) {
+                    height: 200px;
+                }
+
                 img {
                     height: 100%;
                     object-fit: auto;
