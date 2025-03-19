@@ -45,13 +45,59 @@ const getNumberId = (id) => {
 
         .card {
             text-align: center;
-            border: 1px solid #eee;
+            border: 1px solid #555;
             border-radius: 6px;
             width: 23%;
             margin-bottom: 2vh;
             position: relative;
             margin-right: .85vw;
-            box-shadow: 3px 5px 5px #ddd;
+            box-shadow: 3px 5px 5px #444;
+
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 2px solid #00aaff;
+            /* 水藍色邊框 */
+            box-shadow:
+                0 0 12px rgba(0, 170, 255, 0.6),
+                /* 水藍色陰影 */
+                0 0 24px rgba(0, 170, 255, 0.4) inset;
+            transition: all 0.3s ease;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -75%;
+                width: 15%;
+                height: 100%;
+                background: linear-gradient(120deg,
+                        rgba(0, 170, 255, 0) 0%,
+                        /* 水藍透明 */
+                        rgba(0, 170, 255, 0.6) 45%,
+                        /* 水藍半透明 */
+                        rgba(255, 255, 255, 0.6) 50%,
+                        /* 白色過渡 */
+                        rgba(0, 170, 255, 0.6) 55%,
+                        /* 水藍半透明 */
+                        rgba(0, 170, 255, 0) 100%);
+                /* 水藍透明 */
+                transform: skewX(-25deg);
+                filter: blur(2px);
+                animation: none;
+            }
+
+            &:hover::before {
+                animation: shine 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            &:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow:
+                    0 20px 40px rgba(0, 170, 255, 0.4),
+                    0 0 32px rgba(0, 170, 255, 0.6),
+                    inset 0 0 12px rgba(0, 170, 255, 0.5);
+            }
 
             @media (max-width: 600px) {
                 width: 48%;
@@ -72,34 +118,21 @@ const getNumberId = (id) => {
                     object-fit: auto;
                 }
             }
-
-            .skill_list {
-                span {
-                    margin-right: .3vw;
-                }
-            }
-
-            .skill_detailed {
-                display: none;
-                border: 1px solid #ddd;
-                border-radius: 6px;
-                padding: 1vw;
-                position: absolute;
-                top: calc(50% - 1vw);
-                left: 0;
-                background: #eee;
-                box-shadow: 3px 5px 5px #ddd;
-                width: 100%;
-            }
-
-            .skill:hover+.skill_detailed {
-                display: block;
-            }
         }
 
         .card:nth-child(4n) {
             margin-right: 0;
         }
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
     }
 }
 </style>
