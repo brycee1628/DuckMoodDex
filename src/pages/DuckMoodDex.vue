@@ -24,9 +24,9 @@ const getNumberId = (id) => {
         <div class="dex">
             <div class="card" v-for="item in duckMoods" :key="item.id">
                 <div class="card_img"><img v-if="item.id" :src="getImageUrl(item.image)" alt=""></div>
-                <div><span>No.{{ getNumberId(item.id) }}</span> {{ item.name }}</div>
-                <div>情緒: {{ item.mood }}</div>
-                <div>描述: {{ item.description }}</div>
+                <div class="text_l"><span>No.{{ getNumberId(item.id) }}</span> {{ item.name }}</div>
+                <div class="text_l">情緒: {{ item.mood }}</div>
+                <div class="text_l">描述: {{ item.description }}</div>
             </div>
         </div>
     </div>
@@ -92,13 +92,20 @@ const getNumberId = (id) => {
                     inset 0 0 12px rgba(0, 170, 255, 0.5);
             }
 
+            .text_l {
+                @media (max-width: 600px) {
+                    padding: 0 6px;
+                }
+            }
+
             @media (max-width: 600px) {
                 width: 48%;
                 transform: none;
                 /* 禁用手機板浮動效果 */
                 box-shadow: none;
-
                 /* 去掉陰影 */
+                text-align: left;
+
                 &:hover {
                     transform: none;
                     box-shadow: none;
