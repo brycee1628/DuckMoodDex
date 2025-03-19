@@ -4,13 +4,21 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <NavBar :paths="[
-    { id: 0, pageName: '首頁', url: '/' },
-    { id: 1, pageName: '圖鑑', url: '/dex' },
-  ]">
-  </NavBar>
-  <router-view></router-view>
-  <Footer></Footer>
+  <div class="wrapper">
+    <NavBar :paths="[
+      { id: 0, pageName: '首頁', url: '/' },
+      { id: 1, pageName: '圖鑑', url: '/dex' },
+    ]">
+    </NavBar>
+    <router-view></router-view>
+    <Footer></Footer>
+  </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+</style>

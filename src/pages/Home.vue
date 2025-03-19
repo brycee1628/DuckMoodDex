@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <div class="home_box">
+    <div class="box">
         <div class="home_card">
             <div class="card_top">
                 <div class="card_left">
@@ -32,12 +32,7 @@
 </template>
 
 <style lang="scss" scoped>
-.home_box {
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #333;
-    min-height: 84vh;
-
+.box {
     .home_card {
         display: flex;
         flex-direction: column;

@@ -20,7 +20,7 @@ const getNumberId = (id) => {
 </script>
 
 <template>
-    <div class="dex_box">
+    <div class="box">
         <div class="dex">
             <div class="card" v-for="item in duckMoods" :key="item.id">
                 <div class="card_img"><img v-if="item.id" :src="getImageUrl(item.image)" alt=""></div>
@@ -33,11 +33,7 @@ const getNumberId = (id) => {
 </template>
 
 <style lang="scss" scoped>
-.dex_box {
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #333;
-
+.box {
     .dex {
         width: 100%;
         display: flex;

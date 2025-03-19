@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import "./style.css";
+import "./mixins.scss";
 import App from "./App.vue";
 import router from "./router";
 import DevUI from "vue-devui";
