@@ -40,7 +40,7 @@ const getNumberId = (id) => {
         flex-wrap: wrap;
 
         @media (max-width: 600px) {
-            justify-content: center;
+            justify-content: space-between;
         }
 
         .card {
@@ -105,6 +105,7 @@ const getNumberId = (id) => {
                 box-shadow: none;
                 /* 去掉陰影 */
                 text-align: left;
+                margin: 1vw;
 
                 &:hover {
                     transform: none;
@@ -132,10 +133,6 @@ const getNumberId = (id) => {
                     object-fit: auto;
                 }
             }
-        }
-
-        .card:nth-child(4n) {
-            margin-right: 0;
         }
     }
 }
