@@ -11,7 +11,7 @@
 
 <style lang="scss" scoped>
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
