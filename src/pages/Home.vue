@@ -36,6 +36,7 @@
     max-width: 1200px;
     margin: 0 auto;
     color: #333;
+    min-height: 84vh;
 
     .home_card {
         display: flex;
