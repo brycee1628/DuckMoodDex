@@ -17,27 +17,6 @@ const getNumberId = (id) => {
     }
 };
 
-// 用於觸控設備上控制卡片浮動效果
-document.addEventListener('DOMContentLoaded', function () {
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
-        card.addEventListener('touchstart', function () {
-
-            // 點擊時讓卡片浮起來
-            card.style.transform = 'translateY(-10px) scale(1.05)';
-            card.style.boxShadow =
-                '0 20px 40px rgba(0, 170, 255, 0.4), 0 0 32px rgba(0, 170, 255, 0.6), inset 0 0 12px rgba(0, 170, 255, 0.5)';
-        });
-
-        // 當觸摸結束後恢復卡片的位置
-        card.addEventListener('touchend', function () {
-            card.style.transform = 'translateY(0)'; // 恢復原位
-            card.style.boxShadow = ''; // 恢復原始陰影
-        });
-    });
-});
-
 </script>
 
 <template>
@@ -116,7 +95,15 @@ document.addEventListener('DOMContentLoaded', function () {
             @media (max-width: 600px) {
                 width: 48%;
                 transform: none;
-                /* 手機板上移除浮動效果 */
+                /* 禁用手機板浮動效果 */
+                box-shadow: none;
+
+                /* 去掉陰影 */
+                &:hover {
+                    transform: none;
+                    box-shadow: none;
+                    /* 禁用浮動效果，但保留閃光 */
+                }
             }
 
             img {
