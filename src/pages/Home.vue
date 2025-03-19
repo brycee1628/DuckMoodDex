@@ -9,7 +9,7 @@
             <div class="card_top">
                 <div class="card_left">
                     <div class="card_img">
-                        <img src="../images/avatar_1.jpg" alt="">
+                        <img src="../images/avatar_2.jpg" alt="">
                     </div>
 
                 </div>
