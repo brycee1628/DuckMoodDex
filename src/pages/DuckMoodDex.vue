@@ -52,16 +52,9 @@ const getNumberId = (id) => {
             position: relative;
             margin-right: .85vw;
             box-shadow: 3px 5px 5px #444;
-
             position: relative;
             overflow: hidden;
             border-radius: 12px;
-            border: 2px solid #00aaff;
-            /* 水藍色邊框 */
-            box-shadow:
-                0 0 12px rgba(0, 170, 255, 0.6),
-                /* 水藍色陰影 */
-                0 0 24px rgba(0, 170, 255, 0.4) inset;
             transition: all 0.3s ease;
 
             &::before {
