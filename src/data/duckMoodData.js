@@ -27,4 +27,11 @@ export const duckMoods = [
         description: "這隻鴨子的風景被擋住！爆氣呱呱！",
         rarity: "Common",
     },
+    {
+        id: 5,
+        mood: "快門鴨鴨",
+        image: "shutter-duck",
+        description: "傳說中這隻鴨子一天可以拍1000多張照片!會發出喀擦喀擦的叫聲，見到她記得保持微笑！",
+        rarity: "Common",
+    },
 ];

@@ -93,9 +93,7 @@ const getNumberId = (id) => {
             }
 
             .text_l {
-                @media (max-width: 600px) {
-                    padding: 0 6px;
-                }
+                padding: 0 6px;
             }
 
             @media (max-width: 600px) {
