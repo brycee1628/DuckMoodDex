@@ -38,7 +38,7 @@ const getColor = (color) => {
 
                 <div class="card_stats">
                     <div class="stats">
-                        <div>65</div>
+                        <div>66</div>
                         <div>足跡</div>
                     </div>
                     <div class="stats">
