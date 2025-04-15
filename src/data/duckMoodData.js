@@ -34,4 +34,11 @@ export const duckMoods = [
         description: "傳說中這隻鴨子一天可以拍1000多張照片!會發出喀擦喀擦的叫聲，見到她記得保持微笑！",
         rarity: "Common",
     },
+    {
+        id: 6,
+        mood: "哈士鴨",
+        image: "husky-duck",
+        description: "這隻鴨子眼神裡彷彿有著無限睿智..",
+        rarity: "Common",
+    },
 ];
